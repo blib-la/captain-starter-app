@@ -1,0 +1,51 @@
+{
+  "name": "captain-starter-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "postbuild": "npm run copy-captain",
+    "copy-captain": "node scripts/copy.mjs -s captain.md -t out",
+    "dev": "next dev",
+    "lint": "next lint",
+    "ncu": "npx npm-check-updates@latest -u",
+    "ncu:check": "npx npm-check-updates@latest",
+    "spj": "npx sort-package-json@latest",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@captn/joy": "^0.15.0",
+    "@captn/react": "^0.15.0",
+    "@captn/theme": "^0.15.0",
+    "@captn/utils": "^0.15.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/joy": "^5.0.0-beta.32",
+    "next": "^14.2.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "type-fest": "^4.15.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.4.15",
+    "@swc/jest": "^0.2.36",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^15.0.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/uuid": "^9.0.8",
+    "eslint": "^9.0.0",
+    "jest-config": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-mock-extended": "^3.0.6",
+    "jest-ts-webcompat-resolver": "^1.0.0",
+    "next-transpile-modules": "^10.0.1",
+    "prettier": "^3",
+    "typescript": "^5"
+  }
+}
