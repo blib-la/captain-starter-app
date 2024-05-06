@@ -1,8 +1,10 @@
 import Head from "next/head";
 
 import Layout from "@/components/layout";
-import { RandomImage } from "@/components/random-image";
-import { RequiredDownloads } from "@/components/required-downloads";
+import { LuckyKitten } from "@/components/lucky-kitten";
+import { RequiredDownloads } from "@captn/joy/required-downloads";
+
+import models from "@/data/models.json";
 
 export default function Page() {
 	return (
@@ -10,8 +12,8 @@ export default function Page() {
 			<Head>
 				<title>Lucky Kitten</title>
 			</Head>
-			<RequiredDownloads />
-			<RandomImage />
+			<RequiredDownloads allRequiredDownloads={models} />
+			<LuckyKitten />
 		</Layout>
 	);
 }

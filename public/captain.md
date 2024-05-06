@@ -4,13 +4,13 @@ label: Lucky Kitten
 language: en
 type: app
 creatorID: Blibla
-icon: Image
+icon: ./icon.png
 iconColor: "#DB2777"
 parameters:
     width: 800
-    height: 1024
+    height: 800
     minWidth: 800
-    minHeight: 1024
+    minHeight: 800
 ---
 
 an app that generates random kitten illustrations
