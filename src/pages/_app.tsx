@@ -1,7 +1,7 @@
 import { globalStyles } from "@captn/joy/styles";
 import { ThemeProvider } from "@captn/joy/theme";
 import { useSDK } from "@captn/react/use-sdk";
-import { USER_THEME_KEY } from "@captn/utils/constants";
+import { USER_LANGUAGE_KEY, USER_THEME_KEY } from "@captn/utils/constants";
 import CssBaseline from "@mui/joy/CssBaseline";
 import { useColorScheme } from "@mui/joy/styles";
 import type { AppProps } from "next/app";
@@ -30,7 +30,7 @@ export function ThemeHandler() {
 				}
 			}
 		);
-		const unsubscribeLanguage = window.ipc?.on("language", (locale?: string) => {
+		const unsubscribeLanguage = window.ipc?.on(USER_LANGUAGE_KEY, (locale?: string) => {
 			console.log("locale", { locale });
 		});
 		return () => {
